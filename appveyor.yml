@@ -2,7 +2,7 @@ version: 1.0.{build}
 init: 
 - ps: choco install docker-for-windows
 build_script:
-- ps: echo "Build!"
+- ps: echo "Build with logging"
 artifacts:
 - path: '**\*.log'
   name: logs
