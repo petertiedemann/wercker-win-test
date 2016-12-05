@@ -1,1 +1,8 @@
 box: microsoft/windowsservercore
+build:
+  steps:
+    -  script:
+        name: some simple test!
+        code: |-
+          echo "line 1"
+          echo "line 2"
