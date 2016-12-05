@@ -1,6 +1,16 @@
 version: 1.0.{build}
 init: 
-- ps: choco install docker-for-windows
+- ps: 
+    choco install -y docker
+
+    choco install -y docker-machine
+
+    choco install virtualbox
+
+    docker-machine create -d virtualbox dev
+
+    docker-machine ls 
+
 build_script:
 - ps: echo "Build with logging"
 artifacts:
